@@ -1,80 +1,62 @@
 # 🛍️ Customer Behaviour Analysis Dashboard
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=for-the-badge&logo=powerbi)
-![SQL](https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge&logo=postgresql)
-![Python](https://img.shields.io/badge/Python-Data%20Analysis-green?style=for-the-badge&logo=python)
-![Status](https://img.shields.io/badge/Project-Completed-success?style=for-the-badge)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-SQL-blue?style=for-the-badge&logo=postgresql)
+![Python](https://img.shields.io/badge/Python-Analysis-green?style=for-the-badge&logo=python)
 
 ---
 
 # 📌 Project Overview
 
-This **Customer Behaviour Analysis** project is an end-to-end data analytics solution designed to analyze customer purchasing patterns, subscription behavior, product preferences, revenue trends, and customer demographics.
+An end-to-end **Customer Behaviour Analysis Project** built using **SQL, Python, and Power BI** to analyze customer purchasing patterns, revenue trends, subscriptions, demographics, and product performance.
 
-The project combines:
-
-- **SQL** for data querying and transformation
-- **Python (Pandas)** for data cleaning & preprocessing
-- **Power BI** for interactive dashboard visualization
-
-The dashboard provides valuable business insights that help understand:
-
-- Customer purchasing habits
-- Revenue contribution by category
-- Age-group behavior
-- Subscription trends
-- Product category performance
-- Shipping preferences
+This project converts raw customer shopping data into actionable business insights through interactive dashboards and advanced SQL analysis.
 
 ---
 
-# 🚀 Project Objectives
+# 🚀 Objectives
 
-✔ Analyze customer purchase behavior  
-✔ Identify high-performing product categories  
-✔ Understand subscription impact on sales  
-✔ Track customer demographics and ratings  
-✔ Build an interactive business dashboard  
-✔ Generate data-driven business insights  
-
----
-
-# 🧠 Business Questions Solved
-
-### Customer Insights
-- Total number of customers?
-- Average purchase amount?
-- Average customer review rating?
-- Which age group purchases the most?
-
-### Revenue Analysis
-- Which category generates the highest revenue?
-- Revenue contribution by product category
-- Impact of subscription on purchases
-
-### Behaviour Analysis
-- Customer distribution across categories
-- Preferred shipping types
-- Subscription vs non-subscription comparison
-- Purchase trend by age group
+- Analyze customer purchase behavior
+- Track revenue by category
+- Study subscription impact
+- Understand customer demographics
+- Build an interactive Power BI dashboard
+- Perform advanced SQL analytics
 
 ---
 
 # 🛠️ Tech Stack
 
-| Technology | Purpose |
+| Tool | Usage |
 |---|---|
-| PostgreSQL | Database Management |
-| SQL | Data Analysis Queries |
-| Python | Data Cleaning & Preprocessing |
-| Pandas | Data Manipulation |
+| PostgreSQL | Database & SQL Queries |
+| Python (Pandas) | Data Cleaning |
 | Power BI | Dashboard Visualization |
-| Excel/CSV | Dataset Source |
-
 
 ---
 
-# 📊 Dashboard Features
+# 📂 Project Structure
+
+```bash
+Customer_Behaviour_Analysis/
+│
+├── Dataset/
+├── SQL/
+├── PowerBI/
+├── Python/
+├── Images/
+└── README.md
+```
+
+---
+
+# 📊 Dashboard Preview
+
+<img width="100%" alt="Dashboard" src="https://github.com/yourusername/Customer_Behaviour_Analysis/assets/dashboard.png">
+
+---
+
+# 📈 Dashboard Features
 
 ## KPI Cards
 - Total Customers
@@ -82,156 +64,136 @@ The dashboard provides valuable business insights that help understand:
 - Average Review Rating
 
 ## Interactive Filters
-- Subscription Status
 - Gender
+- Subscription Status
 - Product Category
 - Shipping Type
 
 ## Visualizations
 - Revenue by Category
-- Customers by Category
+- Customer by Category
 - Purchase by Age Group
-- Customers by Age Group
-- Subscription Status Breakdown
+- Subscription Analysis
 
 ---
 
-# 📸 Dashboard Preview
+# 🧠 Advanced SQL Queries
 
-## Customer Behaviour Dashboard
-
-<img width="100%" src="images/dashboard.png">
-
----
-
-# 🔍 Key Insights
-
-### 📈 Revenue Insights
-- Clothing category generates the highest revenue
-- Accessories category contributes significantly to repeat purchases
-
-### 👥 Customer Insights
-- Young adults are the most active buyers
-- Subscription users show higher purchasing frequency
-
-### ⭐ Review Analysis
-- Average review rating remains consistently high
-- Positive ratings indicate good customer satisfaction
-
-### 🚚 Shipping Insights
-- Free shipping is the most preferred shipping method
-- Express delivery users generally spend more per purchase
-
----
-
-# ⚙️ SQL Concepts Used
+## 1️⃣ Top Products Purchased with Discounts
 
 ```sql
 SELECT
-GROUP BY
-ORDER BY
-CTE
-WINDOW FUNCTIONS
-DENSE_RANK()
-CASE WHEN
-JOINS
-AGGREGATE FUNCTIONS
-SUBQUERIES
+    item_purchased,
+    COUNT(customer_id) AS total_customers,
+    DENSE_RANK() OVER(
+        ORDER BY COUNT(customer_id) DESC
+    ) AS ranking
+FROM customer
+WHERE discount_applied = 'Yes'
+GROUP BY item_purchased
+LIMIT 5;
 ```
 
 ---
 
-# 🐍 Python Concepts Used
-
-```python
-Pandas
-Data Cleaning
-Handling Missing Values
-Feature Engineering
-Data Transformation
-Exploratory Data Analysis
-```
-
----
-
-# 📊 Power BI Concepts Used
-
-- Data Modeling
-- DAX Measures
-- KPI Cards
-- Interactive Slicers
-- Custom Visualizations
-- Dashboard Design
-- Data Relationships
-
----
-
-# 📈 Example SQL Query
+## 2️⃣ Revenue by Category
 
 ```sql
--- Revenue by Category
-
 SELECT
     category,
     SUM(purchase_amount) AS total_revenue
-FROM customer_data
+FROM customer
 GROUP BY category
 ORDER BY total_revenue DESC;
 ```
 
 ---
 
-# 🎯 Project Outcome
+## 3️⃣ High Spending Customers
 
-This project demonstrates how raw customer data can be transformed into actionable business insights using modern data analytics tools.
-
-The dashboard helps businesses:
-- Improve customer targeting
-- Optimize product categories
-- Increase customer retention
-- Enhance marketing decisions
-- Improve sales strategy
-
----
-
-# 💡 Future Improvements
-
-- Add predictive analytics using Machine Learning
-- Build customer segmentation model
-- Deploy dashboard online
-- Add real-time data updates
-- Create automated reporting system
-
----
-
-# 🧑‍💻 Author
-
-## Prateek Yadav
-
-- B.Tech CSE Student
-- Data Analytics Enthusiast
-- SQL | Python | Power BI
-
----
-
-# ⭐ If You Like This Project
-
-Give this repository a ⭐ on GitHub and support the project.
-
----
-
-# 📬 Contact
-
-Feel free to connect for collaboration, learning, or project discussions.
-
-```bash
-Email: your_email@gmail.com
-LinkedIn: your_linkedin_profile
-GitHub: https://github.com/yourusername
+```sql
+SELECT
+    customer_id,
+    purchase_amount
+FROM customer
+WHERE purchase_amount >
+(
+    SELECT AVG(purchase_amount)
+    FROM customer
+);
 ```
 
 ---
 
-# 🏆 Final Result
+## 4️⃣ Customer Ranking by Purchase Amount
 
-An interactive end-to-end Customer Behaviour Analytics solution capable of transforming customer data into meaningful business intelligence and actionable insights.
+```sql
+SELECT
+    customer_id,
+    purchase_amount,
+    DENSE_RANK() OVER(
+        ORDER BY purchase_amount DESC
+    ) AS customer_rank
+FROM customer;
+```
+
+---
+
+## 5️⃣ Age Group Analysis
+
+```sql
+SELECT
+    CASE
+        WHEN age BETWEEN 18 AND 25 THEN 'Young Adult'
+        WHEN age BETWEEN 26 AND 40 THEN 'Adult'
+        WHEN age BETWEEN 41 AND 55 THEN 'Middle Aged'
+        ELSE 'Senior'
+    END AS age_group,
+    COUNT(*) AS total_customers
+FROM customer
+GROUP BY age_group;
+```
+
+---
+
+# 🐍 Python Operations
+
+```python
+✔ Data Cleaning
+✔ Handling Missing Values
+✔ Data Transformation
+✔ Feature Engineering
+✔ Exploratory Data Analysis
+```
+
+---
+
+# 📊 Power BI Concepts Used
+
+- DAX Measures
+- KPI Cards
+- Interactive Slicers
+- Data Modeling
+- Dashboard Design
+
+---
+
+# 🔍 Key Insights
+
+- Clothing category generated highest revenue
+- Young adults were the most active buyers
+- Subscribed customers spent more on average
+- Free shipping was the most preferred option
+- Customer review ratings remained consistently high
+
+---
+
+# 🎯 Project Outcome
+
+This project demonstrates how customer transaction data can be transformed into meaningful business insights using SQL, Python, and Power BI.
+
+---
+
+# 👨‍💻 Author
+
+## Prateek Yadav
