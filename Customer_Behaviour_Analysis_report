@@ -1,0 +1,283 @@
+# Customer Behaviour Analytics Dashboard
+
+## Power BI Retail Intelligence Project
+
+### Author
+
+**Prateek Yadav**
+B.Tech – Computer Science Engineering
+
+---
+
+# Executive Summary
+
+This project focuses on building a **Customer Behaviour Analytics Dashboard** using **Power BI** to analyze customer purchasing patterns, revenue contribution, demographic trends, and subscription behaviour.
+
+The dashboard transforms raw retail data into interactive business insights through KPIs, charts, slicers, and category-based analytics. The system helps stakeholders monitor customer engagement, product performance, and business growth using visual reporting.
+
+---
+
+# 1. Introduction
+
+Retail businesses generate large amounts of customer and transaction data daily. Analyzing this data manually is inefficient and time-consuming.
+
+The objective of this project is to develop an interactive Power BI dashboard capable of converting customer data into meaningful business insights.
+
+The dashboard focuses on:
+
+* Customer segmentation
+* Revenue analysis
+* Product category performance
+* Subscription analysis
+* Demographic behaviour
+
+---
+
+# 2. Objectives
+
+## Business Objectives
+
+* Analyze customer purchasing behaviour
+* Monitor revenue by product category
+* Compare subscription and non-subscription users
+* Identify high-performing customer segments
+* Improve business decision-making
+
+## Technical Objectives
+
+* Build interactive Power BI dashboards
+* Create DAX-based KPIs
+* Perform data cleaning and transformation
+* Design efficient visual analytics
+
+---
+
+# 3. Technology Stack
+
+| Technology  | Purpose                          |
+| ----------- | -------------------------------- |
+| Power BI    | Dashboard development            |
+| SQL         | Data querying and preprocessing  |
+| DAX         | KPI calculations                 |
+| Power Query | Data cleaning and transformation |
+| CSV Dataset | Customer transaction data        |
+
+---
+
+# 4. Dataset Overview
+
+The dataset contains customer purchasing and demographic information.
+
+## Main Attributes
+
+| Attribute           | Description                |
+| ------------------- | -------------------------- |
+| Customer_ID         | Unique customer identifier |
+| Gender              | Customer gender            |
+| Category            | Purchased product category |
+| Purchase_Amount     | Transaction value          |
+| Subscription_Status | Membership status          |
+| Review_Rating       | Customer rating            |
+| Shipping_Type       | Delivery preference        |
+
+## Product Categories
+
+* Clothing
+* Accessories
+* Footwear
+* Outerwear
+
+---
+
+# 5. System Workflow
+
+The project follows a standard Business Intelligence workflow.
+
+## Workflow Steps
+
+1. Data Collection
+2. Data Cleaning
+3. Data Transformation
+4. Data Modeling
+5. KPI Creation using DAX
+6. Dashboard Development
+7. Business Insight Generation
+
+## Data Cleaning Performed
+
+* Removed duplicate records
+* Fixed missing values
+* Standardized category names
+* Corrected data types
+
+---
+
+# 6. Dashboard Features
+
+## KPI Cards
+
+The dashboard includes important KPIs:
+
+* Total Customers
+* Average Purchase Amount
+* Average Review Rating
+
+These KPIs provide quick business insights.
+
+---
+
+## Subscription Analysis
+
+A donut chart compares subscribed and non-subscribed customers.
+
+### Business Insight
+
+The number of non-subscribed customers is significantly higher, indicating opportunities for membership conversion.
+
+---
+
+## Revenue by Category
+
+A bar chart analyzes revenue contribution across categories.
+
+### Key Observation
+
+The clothing category generates the highest revenue.
+
+---
+
+## Customer by Category
+
+This visualization shows which product categories attract the highest number of customers.
+
+### Finding
+
+Clothing and accessories are the most popular categories.
+
+---
+
+## Purchase by Age Group
+
+This section compares purchasing behaviour among:
+
+* Young Adults
+* Adults
+* Middle-Aged Customers
+* Seniors
+
+### Insight
+
+Young adults show higher purchasing activity compared to other groups.
+
+---
+
+## Interactive Slicers
+
+The dashboard includes filters for:
+
+* Gender
+* Subscription Status
+* Product Category
+* Shipping Type
+
+These slicers enable real-time dashboard interaction.
+
+---
+
+# 7. DAX Measures
+
+## Total Customers
+
+```DAX
+Total Customers = DISTINCTCOUNT(Customer[Customer_ID])
+```
+
+## Average Purchase
+
+```DAX
+Avg Purchase = AVERAGE(Customer[Purchase_Amount])
+```
+
+## Revenue
+
+```DAX
+Revenue = SUM(Customer[Purchase_Amount])
+```
+
+These measures dynamically calculate business metrics within the dashboard.
+
+---
+
+# 8. Business Insights
+
+## Key Insights Generated
+
+1. Clothing is the highest revenue-generating category.
+2. Young adults contribute major purchase activity.
+3. Non-subscribed users dominate the customer base.
+4. Accessories and clothing attract maximum customers.
+5. Customer review ratings indicate positive satisfaction.
+
+---
+
+# 9. Performance Optimization
+
+To improve dashboard responsiveness:
+
+* Unnecessary columns were removed
+* DAX calculations were optimized
+* Lightweight visuals were used
+* Data relationships were simplified
+
+These optimizations improved report performance and usability.
+
+---
+
+# 10. Industry Applications
+
+This dashboard architecture can be used in:
+
+* Retail analytics
+* E-commerce reporting
+* Customer segmentation systems
+* Marketing performance analysis
+* Revenue monitoring dashboards
+
+---
+
+# 11. Future Enhancements
+
+The project can be improved using:
+
+* Predictive analytics
+* Machine learning models
+* Real-time database integration
+* Customer churn analysis
+* Cloud deployment using Power BI Service
+
+---
+
+# 12. Conclusion
+
+The **Customer Behaviour Analytics Dashboard** successfully demonstrates how Power BI can transform raw retail data into actionable business intelligence.
+
+The project provides insights into:
+
+* Customer purchasing behaviour
+* Revenue trends
+* Category performance
+* Demographic analysis
+* Subscription engagement
+
+This project strengthened practical knowledge in:
+
+* Power BI
+* SQL
+* DAX
+* Data visualization
+* Dashboard engineering
+* Business intelligence
+
+The final dashboard delivers a professional analytics solution suitable for retail business reporting and decision-making.
+
+---
