@@ -96,7 +96,8 @@ Generated actionable insights for business decision-making.
 
 <div align="center">
 
-<img width="100%" src="https://github.com/yourusername/Customer_Behaviour_Analysis/assets/dashboard.png">
+<img width="843" height="502" alt="Screenshot 2026-05-07 221634" src="https://github.com/user-attachments/assets/0feac134-0e2e-43a1-b2d0-c1aed4899762" />
+
 
 </div>
 
