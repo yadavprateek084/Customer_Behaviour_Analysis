@@ -71,30 +71,6 @@ The dashboard provides valuable business insights that help understand:
 | Power BI | Dashboard Visualization |
 | Excel/CSV | Dataset Source |
 
----
-
-# 📂 Project Structure
-
-```bash
-Customer_Behaviour_Analysis/
-│
-├── dataset/
-│   └── customer_shopping_data.csv
-│
-├── sql/
-│   └── customer_behaviour_queries.sql
-│
-├── powerbi/
-│   └── customer_behaviour_dashboard.pbix
-│
-├── images/
-│   └── dashboard.png
-│
-├── notebooks/
-│   └── data_cleaning.ipynb
-│
-└── README.md
-```
 
 ---
 
