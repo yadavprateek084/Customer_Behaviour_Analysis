@@ -178,6 +178,9 @@ GROUP BY age_group;
 
 ---
 
+<img width="843" height="502" alt="Screenshot 2026-05-07 221634" src="https://github.com/user-attachments/assets/7d73f9b8-24f9-4c7c-ac65-f9da089311de" />
+
+
 # 🔍 Key Insights
 
 - Clothing category generated highest revenue
