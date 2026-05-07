@@ -1,55 +1,94 @@
 <div align="center">
 
-# 🚀 Customer Behaviour Analysis Dashboard
+# 🚀 Customer Behaviour Analysis  
+### End-to-End Data Analyst Project
 
-### End-to-End Data Analytics Project using SQL • Python • Power BI
+<img src="https://img.shields.io/badge/Role-Data_Analyst-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/SQL-Advanced-success?style=for-the-badge&logo=postgresql">
+<img src="https://img.shields.io/badge/Python-Pandas-yellow?style=for-the-badge&logo=python">
+<img src="https://img.shields.io/badge/Power_BI-Dashboard-orange?style=for-the-badge&logo=powerbi">
+<img src="https://img.shields.io/badge/Project-End_to_End-red?style=for-the-badge">
 
-<img src="https://img.shields.io/badge/PostgreSQL-Advanced_SQL-blue?style=for-the-badge&logo=postgresql">
-<img src="https://img.shields.io/badge/Python-Data_Analysis-yellow?style=for-the-badge&logo=python">
-<img src="https://img.shields.io/badge/Power_BI-Interactive_Dashboard-orange?style=for-the-badge&logo=powerbi">
-<img src="https://img.shields.io/badge/Project-End_to_End-success?style=for-the-badge">
+### 📊 Transforming Raw Customer Data into Business Insights
 
 </div>
 
 ---
 
-# 📌 Project Overview
+# 📌 Project Summary
 
-Developed a complete **Customer Behaviour Analytics Solution** to analyze purchasing patterns, customer demographics, revenue trends, subscription impact, and product performance using real-world business analytics workflows.
+This project is a complete **End-to-End Data Analytics Solution** developed to analyze customer purchasing behavior, spending patterns, subscription impact, customer demographics, and category-wise business performance.
 
-This project demonstrates strong skills in:
+The project follows the complete workflow of a real-world **Data Analyst role**:
 
-✔ Advanced SQL Analytics  
-✔ Data Cleaning & Transformation  
-✔ Business Intelligence  
-✔ Dashboard Development  
-✔ Data Visualization  
-✔ Insight Generation  
-
----
-
-# 🎯 Business Problem
-
-Businesses generate massive customer transaction data but struggle to extract actionable insights.
-
-This project solves that problem by building an interactive analytics dashboard that helps businesses:
-
-- Understand customer purchasing behavior
-- Identify high revenue categories
-- Analyze subscription impact
-- Track customer demographics
-- Improve business decision-making
+### ✔ Data Collection  
+### ✔ Data Cleaning  
+### ✔ Data Transformation  
+### ✔ SQL Analysis  
+### ✔ Business Insights Generation  
+### ✔ Dashboard Development  
+### ✔ Data Visualization  
 
 ---
 
-# 🛠️ Tech Stack
+# 🎯 Business Objective
+
+Businesses often struggle to understand:
+
+- Which customers generate the highest revenue
+- Which categories perform best
+- How subscriptions affect purchases
+- Customer buying patterns
+- Revenue trends across demographics
+
+This dashboard helps stakeholders make data-driven business decisions through interactive analytics and visualization.
+
+---
+
+# 🛠️ Tools & Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| PostgreSQL | Data Storage & Querying |
-| SQL | Advanced Data Analysis |
+| PostgreSQL | Database Management |
+| SQL | Data Analysis & Querying |
 | Python (Pandas) | Data Cleaning & Processing |
-| Power BI | Dashboard & Visualization |
+| Power BI | Interactive Dashboard |
+| Excel/CSV | Dataset Source |
+
+---
+
+# 🔄 End-to-End Workflow
+
+## 📥 1. Data Collection
+- Imported customer shopping dataset
+- Structured raw transactional data
+
+## 🧹 2. Data Cleaning using Python
+Performed:
+- Missing value handling
+- Duplicate removal
+- Data formatting
+- Feature engineering
+- Data preprocessing
+
+## 🗄️ 3. SQL Data Analysis
+Used advanced SQL techniques:
+- Window Functions
+- Aggregate Functions
+- Ranking Functions
+- Subqueries
+- CASE Statements
+- Grouping & Filtering
+
+## 📊 4. Dashboard Development
+Built an interactive Power BI dashboard with:
+- KPI Cards
+- Dynamic Charts
+- Slicers & Filters
+- Business Visualizations
+
+## 📈 5. Business Insight Generation
+Generated actionable insights for business decision-making.
 
 ---
 
@@ -63,31 +102,31 @@ This project solves that problem by building an interactive analytics dashboard 
 
 ---
 
-# 🔥 Dashboard Highlights
+# 🔥 Dashboard Features
 
 ### 📌 KPI Metrics
 - Total Customers
 - Average Purchase Amount
-- Average Customer Rating
+- Average Review Rating
 
-### 📌 Interactive Analysis
-- Subscription Analysis
+### 📌 Interactive Filters
+- Gender
+- Subscription Status
+- Product Category
+- Shipping Type
+
+### 📌 Visual Analysis
 - Revenue by Category
-- Customer Distribution
-- Age Group Analysis
-- Shipping Preference Analysis
-
-### 📌 Business Insights
-- Revenue Trends
+- Customers by Category
+- Purchase by Age Group
+- Subscription Distribution
 - Customer Segmentation
-- Spending Behaviour
-- Product Performance
 
 ---
 
-# 🧠 Advanced SQL Analytics
+# 🧠 Advanced SQL Queries Used
 
-## 🏆 Top Products Purchased Using Discounts
+## 🏆 Top Products Purchased with Discounts
 
 ```sql
 SELECT
@@ -104,7 +143,7 @@ LIMIT 5;
 
 ---
 
-## 💰 Revenue Generated by Product Category
+## 💰 Revenue Analysis by Category
 
 ```sql
 SELECT
@@ -117,7 +156,7 @@ ORDER BY total_revenue DESC;
 
 ---
 
-## 👑 High-Value Customers Analysis
+## 👑 High Spending Customers
 
 ```sql
 SELECT
@@ -147,56 +186,82 @@ FROM customer;
 
 ---
 
-# 🐍 Python Workflow
+## 👥 Customer Age Group Analysis
+
+```sql
+SELECT
+    CASE
+        WHEN age BETWEEN 18 AND 25 THEN 'Young Adult'
+        WHEN age BETWEEN 26 AND 40 THEN 'Adult'
+        WHEN age BETWEEN 41 AND 55 THEN 'Middle Aged'
+        ELSE 'Senior'
+    END AS age_group,
+    COUNT(*) AS total_customers
+FROM customer
+GROUP BY age_group;
+```
+
+---
+
+# 🐍 Python Skills Demonstrated
 
 ```python
+✔ Pandas
 ✔ Data Cleaning
 ✔ Handling Missing Values
-✔ Feature Engineering
 ✔ Data Transformation
+✔ Feature Engineering
 ✔ Exploratory Data Analysis
 ```
 
 ---
 
-# 📊 Power BI Features
+# 📊 Power BI Skills Demonstrated
 
-- Interactive Slicers
-- KPI Cards
-- Dynamic Visualizations
 - Data Modeling
 - DAX Measures
-- Business Dashboard Design
+- Interactive Slicers
+- KPI Cards
+- Dashboard Designing
+- Business Storytelling
+- Visual Analytics
 
 ---
 
-<img width="843" height="502" alt="Screenshot 2026-05-07 221634" src="https://github.com/user-attachments/assets/22a8f241-90eb-479b-a11b-dfed8f5c49b6" />
-
-
-# 🔍 Key Insights Generated
+# 🔍 Key Business Insights
 
 ✅ Clothing category generated highest revenue  
+
 ✅ Young adults were the most active buyers  
+
 ✅ Subscription customers spent more on average  
-✅ Free shipping was the most preferred shipping method  
-✅ Customer ratings indicated high satisfaction levels  
+
+✅ Free shipping was the most preferred shipping option  
+
+✅ Customer review ratings showed strong customer satisfaction  
 
 ---
 
-# 📈 Project Impact
+# 📈 Project Outcome
 
-This project demonstrates the ability to:
+Successfully transformed raw customer transaction data into an interactive business intelligence dashboard capable of generating meaningful insights for strategic decision-making.
 
-- Work with real-world datasets
-- Solve business problems using data
-- Perform advanced SQL analytics
-- Build professional BI dashboards
-- Generate actionable insights for decision-making
+This project highlights:
+- Real-world Data Analytics workflow
+- Strong SQL problem-solving
+- Dashboard development skills
+- Business understanding
+- Data storytelling ability
 
 ---
 
 # 👨‍💻 Author
 
 ## Prateek Yadav
+
+
+<div align="center">
+
+# ⭐ Star this repository if you found it useful!
 
 </div>
